@@ -1,0 +1,27 @@
+{
+  "name": "mytodos",
+  "version": "1.0.0",
+  "description": "A very simple todos app powered by electron",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanvir23/myTodos.git"
+  },
+  "keywords": [
+    "electron",
+    "javascript",
+    "nodejs"
+  ],
+  "author": "tanvir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanvir23/myTodos/issues"
+  },
+  "homepage": "https://github.com/tanvir23/myTodos#readme",
+  "dependencies": {
+    "electron": "2.0.5"
+  }
+}
