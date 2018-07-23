@@ -5,10 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>My Todos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <!-- <script src="main.js"></script> -->
 </head>
 <body>
     <h1>Welcome to my todos</h1>
+    <ul>
+
+    </ul>
+
+    <script>
+    const electron = require('electron');
+    const { ipcRenderer } = electron;
+    const list = document.querySelector('ul');
+    ipcRenderer.on('receivedNewTodo', (event, todo) => {
+        const li = document.createElement('li');
+        const text = document.createTextNode(todo);
+        li.appendChild(text);
+        list.appendChild(li);
+    });
+    ipcRenderer.on('clearTodos', () => {
+        list.innerHTML = '';
+    });
+    </script>
 </body>
 </html>
